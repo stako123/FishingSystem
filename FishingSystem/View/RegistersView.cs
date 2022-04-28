@@ -21,5 +21,10 @@ namespace FishingSystem.View
         {
 
         }
+
+        private void RegistersView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

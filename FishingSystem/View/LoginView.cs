@@ -16,25 +16,12 @@ namespace FishingSystem.View
         {
             InitializeComponent();
         }
-
-        private void LoginView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LogInbtn_Click(object sender, EventArgs e)
         {
-            if (Namespacetxt.Text=="your_user_name" && Passwordspacetxt.Text=="your_password")
+            if (Namespacetxt.Text=="name" && Passwordspacetxt.Text=="password")
             {
-                //това води до homescreena
-                new HomeScreen().Show();
+                new HomeScreenView().Show();
                 this.Hide();
-
             }
 
             else
@@ -43,8 +30,24 @@ namespace FishingSystem.View
                 Namespacetxt.Clear();
                 Passwordspacetxt.Clear();
                 Namespacetxt.Focus();
-
             }
+        }
+
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPass.Checked)
+            {
+                Passwordspacetxt.PasswordChar = '\0';
+            }
+            else
+            {
+                Passwordspacetxt.PasswordChar = '*';
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
