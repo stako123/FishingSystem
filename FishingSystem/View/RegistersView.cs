@@ -21,5 +21,21 @@ namespace FishingSystem.View
         {
 
         }
+
+        private void RegistersView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            new WelcomeView().Show();
+            this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
