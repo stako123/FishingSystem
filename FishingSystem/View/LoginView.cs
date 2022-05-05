@@ -18,7 +18,7 @@ namespace FishingSystem.View
         }
         private void LogInbtn_Click(object sender, EventArgs e)
         {
-            if (Namespacetxt.Text=="name" && Passwordspacetxt.Text=="password")
+            if (LoginNametxt.Text=="name" && LoginPasswordtxt.Text=="password")
             {
                 new HomeScreenView().Show();
                 this.Hide();
@@ -27,9 +27,9 @@ namespace FishingSystem.View
             else
             {
                 MessageBox.Show("The Username or password is incorrect, please try again");
-                Namespacetxt.Clear();
-                Passwordspacetxt.Clear();
-                Namespacetxt.Focus();
+                LoginNametxt.Clear();
+                LoginPasswordtxt.Clear();
+                LoginNametxt.Focus();
             }
         }
 
@@ -37,17 +37,23 @@ namespace FishingSystem.View
         {
             if (checkBoxShowPass.Checked)
             {
-                Passwordspacetxt.PasswordChar = '\0';
+                LoginPasswordtxt.PasswordChar = '\0';
             }
             else
             {
-                Passwordspacetxt.PasswordChar = '*';
+                LoginPasswordtxt.PasswordChar = '*';
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            new WelcomeView().Show();
+            this.Hide();
         }
     }
 }

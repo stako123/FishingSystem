@@ -28,5 +28,10 @@ namespace FishingSystem.View
             new RegistersView().Show();
             this.Hide();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

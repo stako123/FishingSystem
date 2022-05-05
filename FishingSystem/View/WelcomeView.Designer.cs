@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGoToRegister = new System.Windows.Forms.Button();
             this.btnGoToLogin = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,12 +67,28 @@
             this.btnGoToLogin.UseVisualStyleBackColor = true;
             this.btnGoToLogin.Click += new System.EventHandler(this.btnGoToLogin_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnClose.Location = new System.Drawing.Point(507, -2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(24, 23);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // WelcomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(529, 450);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnGoToLogin);
             this.Controls.Add(this.btnGoToRegister);
             this.Controls.Add(this.label1);
@@ -86,5 +103,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGoToRegister;
         private System.Windows.Forms.Button btnGoToLogin;
+        private System.Windows.Forms.Button btnClose;
     }
 }
