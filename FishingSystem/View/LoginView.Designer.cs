@@ -60,7 +60,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(-4, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
@@ -97,19 +97,22 @@
             // LoginNametxt
             // 
             this.LoginNametxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginNametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginNametxt.Location = new System.Drawing.Point(92, 18);
             this.LoginNametxt.Multiline = true;
             this.LoginNametxt.Name = "LoginNametxt";
-            this.LoginNametxt.Size = new System.Drawing.Size(156, 20);
+            this.LoginNametxt.Size = new System.Drawing.Size(169, 20);
             this.LoginNametxt.TabIndex = 8;
             // 
             // LoginPasswordtxt
             // 
             this.LoginPasswordtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LoginPasswordtxt.Location = new System.Drawing.Point(93, 70);
+            this.LoginPasswordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginPasswordtxt.Location = new System.Drawing.Point(104, 70);
             this.LoginPasswordtxt.Multiline = true;
             this.LoginPasswordtxt.Name = "LoginPasswordtxt";
-            this.LoginPasswordtxt.Size = new System.Drawing.Size(156, 20);
+            this.LoginPasswordtxt.PasswordChar = '*';
+            this.LoginPasswordtxt.Size = new System.Drawing.Size(157, 20);
             this.LoginPasswordtxt.TabIndex = 9;
             // 
             // checkBoxShowPass
