@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FishingSystem.Controller;
+using FishingSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +14,23 @@ namespace FishingSystem.View
 {
     public partial class LoginView : Form
     {
+        FishingSystemController fish = new FishingSystemController();
         public LoginView()
         {
             InitializeComponent();
         }
         private void LogInbtn_Click(object sender, EventArgs e)
         {
-            if (LoginNametxt.Text=="name" && LoginPasswordtxt.Text=="password")
+            var Login = fish.Login(LoginNametxt.Text, LoginPasswordtxt.Text);
+            if (Login != null)
             {
-                new HomeScreenView().Show();
-                this.Hide();
+                MessageBox.Show(Login);
             }
-
             else
             {
-                MessageBox.Show("The Username or password is incorrect, please try again");
-                LoginNametxt.Clear();
-                LoginPasswordtxt.Clear();
-                LoginNametxt.Focus();
+                HomeScreenView homeScreenView = new HomeScreenView();
+                this.Hide();
+                homeScreenView.Show();
             }
         }
 
