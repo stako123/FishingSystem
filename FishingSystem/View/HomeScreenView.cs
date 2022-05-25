@@ -16,5 +16,11 @@ namespace FishingSystem.View
         {
             InitializeComponent();
         }
+
+        private void btnCatch_Click(object sender, EventArgs e)
+        {
+            new CatchView().Show();
+            this.Hide();
+        }
     }
 }
