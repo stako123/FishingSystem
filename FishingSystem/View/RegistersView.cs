@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FishingSystem.Controller;
+using FishingSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +14,10 @@ namespace FishingSystem.View
 {
     public partial class RegistersView : Form
     {
+        RegisterController controller = new RegisterController();
         public RegistersView()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RegistersView_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGoBack_Click(object sender, EventArgs e)
@@ -36,6 +29,21 @@ namespace FishingSystem.View
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Login acc = new Login();
+
+            acc.name = txtName.Text;
+            acc.password = txtPassword.Text;
+            acc.email = txtEmail.Text;
+
+            controller.RegisterCreate(acc);
+
+            HomeScreenView homeScreenView = new HomeScreenView();
+            this.Hide();
+            homeScreenView.Show();
         }
     }
 }

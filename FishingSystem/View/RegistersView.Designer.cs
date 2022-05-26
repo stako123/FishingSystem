@@ -67,7 +67,6 @@
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEmail.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblPassword
             // 
@@ -120,6 +119,7 @@
             this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // panel1
             // 
@@ -204,7 +204,6 @@
             this.Controls.Add(this.btnRegister);
             this.Name = "RegistersView";
             this.Text = "RegistersView";
-            this.Load += new System.EventHandler(this.RegistersView_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);

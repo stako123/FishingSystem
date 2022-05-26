@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\FishingSystemController.cs" />
+    <Compile Include="Controller\RegisterController.cs" />
     <Compile Include="Model\Catch.cs">
       <DependentUpon>FishingModel.tt</DependentUpon>
     </Compile>
