@@ -67,7 +67,6 @@
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEmail.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblPassword
             // 
@@ -84,15 +83,17 @@
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Location = new System.Drawing.Point(54, 12);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(63, 12);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(159, 20);
+            this.txtName.Size = new System.Drawing.Size(150, 20);
             this.txtName.TabIndex = 4;
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(54, 65);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -102,6 +103,7 @@
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(83, 118);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -120,6 +122,7 @@
             this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // panel1
             // 
@@ -204,7 +207,6 @@
             this.Controls.Add(this.btnRegister);
             this.Name = "RegistersView";
             this.Text = "RegistersView";
-            this.Load += new System.EventHandler(this.RegistersView_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
