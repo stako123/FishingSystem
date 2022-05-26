@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnCatch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // HomeScreen
+            // btnCatch
+            // 
+            this.btnCatch.Location = new System.Drawing.Point(107, 137);
+            this.btnCatch.Name = "btnCatch";
+            this.btnCatch.Size = new System.Drawing.Size(181, 119);
+            this.btnCatch.TabIndex = 0;
+            this.btnCatch.Text = "Catch";
+            this.btnCatch.UseVisualStyleBackColor = true;
+            this.btnCatch.Click += new System.EventHandler(this.btnCatch_Click);
+            // 
+            // HomeScreenView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "HomeScreen";
+            this.Controls.Add(this.btnCatch);
+            this.Name = "HomeScreenView";
             this.Text = "HomeScreen";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCatch;
     }
 }
